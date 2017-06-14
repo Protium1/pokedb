@@ -1,9 +1,9 @@
 <h1>Listing pokemon</h1>
 
-<% @pokes.in_groups_of(3) do |group| %>
+<% @pokes.in_groups_of(4) do |group| %>
   <div class="row">
     <% group.compact.each do |poke| %>
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <%= image_tag poke.picture_url, width: '60%' if poke.picture.present?%>
         <p>No.<%= poke.number %><h4><%= link_to poke.name, poke %></h4></p>
       </div>
