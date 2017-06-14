@@ -4,7 +4,7 @@ class PokesController < ApplicationController
   # GET /pokes
   # GET /pokes.json
   def index
-    @pokes = Poke.all
+    @pokes = Poke.select("number").order("number DESC")
   end
 
   # GET /pokes/1
